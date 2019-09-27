@@ -124,7 +124,7 @@ https://carla.readthedocs.io/en/latest/
 
 ------
 
-###  Carla 安装与基本API教程
+###  Carla Installation and Basic API Tutorial
 
 Carla is available in two versions, the Release version (which has the unreal4 engine and Carla scripts packaged into a build package that can be downloaded and run in the.exe file) and the build version that installs the tools and dependencies (which requires you to download the unreal engine and Carla's source code and build the build script yourself).There is not much difference between the two. If there is a need for the scene environment model, you need to install the version yourself and modify the scene in unreal engine.
 
