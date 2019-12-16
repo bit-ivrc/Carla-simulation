@@ -71,3 +71,6 @@ The simulation scene may not meet the requirements of algorithm verification, bu
 #### 8. Freshman orientation training, undergraduate project participation, and assistance in curriculum construction
 
 #### 9. Actively participate in the Carla AD Challenge
+
+#### 10. Example of building a joint simulation of ros and carla
+You can use this example to build a joint simulation of ros and carla.(Ongoing, immature)
