@@ -11,6 +11,7 @@
 
 """
 Welcome to CARLA manual control.
+This document is modified based on the official documentation used by BIT-IVRC.
 
 Use ARROWS or WASD keys for control.
 
@@ -170,10 +171,12 @@ class World(object):
         blueprint = random.choice(self.world.get_blueprint_library().filter(self._actor_filter))
         blueprint.set_attribute('role_name', self.actor_role_name)
         if blueprint.has_attribute('color'):
-            color = random.choice(blueprint.get_attribute('color').recommended_values)
+            #color = random.choice(blueprint.get_attribute('color').recommended_values)	 
+	    color = '142,229,238'
             blueprint.set_attribute('color', color)
         if blueprint.has_attribute('driver_id'):
-            driver_id = random.choice(blueprint.get_attribute('driver_id').recommended_values)
+            #driver_id = random.choice(blueprint.get_attribute('driver_id').recommended_values)
+	    driver_id = 1
             blueprint.set_attribute('driver_id', driver_id)
         if blueprint.has_attribute('is_invincible'):
             blueprint.set_attribute('is_invincible', 'true')
@@ -842,12 +845,14 @@ def main():
     argparser.add_argument(
         '--filter',
         metavar='PATTERN',
-        default='vehicle.*',
+	# set the default vehicle as audi.tt
+        default='vehicle.audi.tt',
         help='actor filter (default: "vehicle.*")')
     argparser.add_argument(
         '--rolename',
         metavar='NAME',
-        default='hero',
+	# set the default rolename as ego_vehicle
+        default='ego_vehicle',
         help='actor role name (default: "ego_vehicle")')
     argparser.add_argument(
         '--gamma',
